@@ -19,6 +19,9 @@ SRC = main.c\
 	   draw_line.c\
 	   calcul_angle.c\
 	   sort_list.c\
+	   parser.c\
+	   twodimlen.c\
+	   twodimfree.c\
 	   read.c
 SRCS = $(addprefix srcs/, $(SRC))
 OBJS = $(SRC:%.c=objs/%.o)

@@ -11,7 +11,9 @@ int				prog_close(t_graphic *p)
 
 static void		init(t_graphic *p, char *title)
 {
-	if ((p->list = read_file(title)) == NULL)
+	//if ((p->list = read_file(title)) == NULL)
+	//	exit(EXIT_FAILURE);
+	if (parser(p, title, 0) == -1 && write(1, "error: parsing\n", 15))
 		exit(EXIT_FAILURE);
 	calcul_angle(p->list);
 	sort_list(p->list);

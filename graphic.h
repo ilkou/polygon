@@ -66,8 +66,13 @@ void calcul_angle(t_lst *list);
 void sort_list(t_lst *start);
 void    draw_line(t_ipoint p1, t_ipoint p2, t_graphic *p, int color);
 void    mlx_putpixel(t_graphic *p, int x, int y, int color);
+
 double		ft_atod(char *c);
+void	twodimfree(char ***to);
+int	twodimlen(char **twodim);
+int	parser(t_graphic *p, char *file, int i);
 t_lst          *read_file(char *av);
+
 int					prog_close(t_graphic *p);
 int					keys(int k, t_graphic *p);
 int					draw(t_graphic *p);
