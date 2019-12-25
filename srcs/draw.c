@@ -44,6 +44,12 @@ int				draw(t_graphic *p)
 	bzero(p->pixels, WIDTH * HEIGHT * 4);
 	draw_line((t_ipoint){WIDTH/2, 0}, (t_ipoint){WIDTH/2, HEIGHT}, p, 0xFFFFFF);
 	draw_line((t_ipoint){0, HEIGHT/2}, (t_ipoint){WIDTH, HEIGHT/2}, p, 0xFFFFFF);
+	for (int i = 20; i < WIDTH; i+=20) {
+		draw_line((t_ipoint){i, HEIGHT/2 - 2}, (t_ipoint){i, HEIGHT/2 + 2}, p, 0xFFFFFF);
+	}
+	for (int i = 20; i < HEIGHT; i+=20) {
+		draw_line((t_ipoint){WIDTH/2 - 2, i}, (t_ipoint){WIDTH/2 + 2, i}, p, 0xFFFFFF);
+	}
 	draw_points(p);
 	mlx_put_image_to_window(p->mlx, p->win, p->img, 0, 0);
 	return (1);
