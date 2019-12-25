@@ -13,8 +13,8 @@
 NAME = polygon
 
 SRC = main.c\
-	   ilk_draw.c\
-	   ilk_keys.c\
+	   draw.c\
+	   keys.c\
 	   ft_atod.c\
 	   draw_line.c\
 	   calcul_angle.c\

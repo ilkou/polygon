@@ -54,9 +54,9 @@ typedef struct	s_line
 typedef struct		s_graphic
 {
 	t_lst			*list;
-	void			*ilk_win;
-	void			*ilk_img;
-	void			*ilk_mlx;
+	void			*win;
+	void			*img;
+	void			*mlx;
 	int				*pixels;
 	int				bpp;
 	int				size_line;
@@ -68,8 +68,8 @@ void    draw_line(t_ipoint p1, t_ipoint p2, t_graphic *p, int color);
 void    mlx_putpixel(t_graphic *p, int x, int y, int color);
 double		ft_atod(char *c);
 t_lst          *read_file(char *av);
-int					ilk_close(t_graphic *p);
-int					ilk_keys(int k, t_graphic *p);
-int					ilk_draw(t_graphic *p);
+int					prog_close(t_graphic *p);
+int					keys(int k, t_graphic *p);
+int					draw(t_graphic *p);
 
 #endif

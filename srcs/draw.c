@@ -39,12 +39,12 @@ static void			draw_points(t_graphic *p)
 	draw_line(p_initial, p1, p, 0xFF00FC);
 }
 
-int				ilk_draw(t_graphic *p)
+int				draw(t_graphic *p)
 {
 	bzero(p->pixels, WIDTH * HEIGHT * 4);
 	draw_line((t_ipoint){WIDTH/2, 0}, (t_ipoint){WIDTH/2, HEIGHT}, p, 0xFFFFFF);
 	draw_line((t_ipoint){0, HEIGHT/2}, (t_ipoint){WIDTH, HEIGHT/2}, p, 0xFFFFFF);
 	draw_points(p);
-	mlx_put_image_to_window(p->ilk_mlx, p->ilk_win, p->ilk_img, 0, 0);
+	mlx_put_image_to_window(p->mlx, p->win, p->img, 0, 0);
 	return (1);
 }
