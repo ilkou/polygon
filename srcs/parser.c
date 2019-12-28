@@ -28,5 +28,6 @@ int	parser(t_graphic *p, char *file, int i)
 		twodimfree(&split);
 		i++;
 	}
+	close(fd);
 	return (i > 1 ? 1 : -1);
 }
